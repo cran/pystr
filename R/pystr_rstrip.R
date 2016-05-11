@@ -6,10 +6,10 @@
 #' If omitted, the \code{chars} argument defaults to removing whitespace. The \code{chars} argument
 #' is not a suffix; rather, all combinations of its values are stripped.
 #'
-#' @param str A string.
-#' @param chars A string.
+#' @param str A character vector.
+#' @param chars A character string.
 #'
-#' @return A string.
+#' @return A character vector.
 #'
 #' @references \url{https://docs.python.org/3/library/stdtypes.html#str.rstrip}
 #'
@@ -21,18 +21,5 @@
 #'
 #' @export
 pystr_rstrip <- function(str, chars = " ") {
-  stripped = str
-  chars = strsplit(chars, "")[[1]]
-
-  for(i in nchar(str):1) {
-    letter = substr(str, i, i)
-
-    if(letter %in% chars) {
-      stripped = substr(stripped, 1, nchar(stripped) - 1)
-    } else {
-      break
-    }
-  }
-
-  return(stripped)
+  return( pystr_rstrip_(str,chars) )
 }

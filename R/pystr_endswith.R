@@ -3,16 +3,16 @@
 #' Return \code{TRUE} if the string \code{str} ends with the specified
 #' \code{suffix}, otherwise return \code{FALSE}.
 #'
-#' @details \code{suffix} can also be a list of suffixes to look for.
+#' @details
 #' With optional \code{start}, test beginning at that position.
 #' With optional \code{end}, stop comparing at that position.
 #'
-#' @param str A string.
-#' @param suffix A string, character vector, or list of strings.
-#' @param start An integer.
-#' @param end An integer.
+#' @param str A character vector.
+#' @param suffix A character vector.
+#' @param start A numeric vector.
+#' @param end A numeric vector.
 #'
-#' @return \code{TRUE} or \code{FALSE}
+#' @return A logical vector.
 #'
 #' @references \url{https://docs.python.org/3/library/stdtypes.html#str.endswith}
 #'
@@ -21,25 +21,17 @@
 #' @examples
 #' pystr_endswith("selfie.jpg", ".jpg")
 #' pystr_endswith("selfie.jpg", ".png")
-#' pystr_endswith("selfie.jpg", c(".jpg", ".png"))
-#' pystr_endswith("selfie.jpg", list(".jpg", ".png"))
 #' pystr_endswith("hello world", "ello", 1, 5)
 #'
 #' @export
 pystr_endswith <- function(str, suffix, start=1, end=nchar(str)) {
-  suffix = if(is.list(suffix)) suffix else as.list(suffix)
+  return(mapply(pystr_endswith_, str, suffix, start, end, USE.NAMES=FALSE))
+}
+
+pystr_endswith_ <- function(str, suffix, start, end) {
   string_to_check = substr(str, start, end)
-
-  for(i in 1:length(suffix)) {
-    suf = suffix[[i]]
-    start_check = nchar(string_to_check) - nchar(suf) + 1
-    end_check = nchar(string_to_check)
-    letters_to_check = substr(string_to_check, start_check, end_check)
-
-    if(letters_to_check == suf) {
-      return(TRUE)
-    }
-  }
-
-  return(FALSE)
+  start_check = nchar(string_to_check) - nchar(suffix) + 1
+  end_check = nchar(string_to_check)
+  letters_to_check = substr(string_to_check, start_check, end_check)
+  return(letters_to_check == suffix)
 }

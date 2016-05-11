@@ -7,15 +7,15 @@
 pystr_partition(str, sep)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{sep}{A string.}
+\item{sep}{A character string.}
 }
 \value{
-A character vector.
+A list of character vectors.
 }
 \description{
-Split the string at the first occurrence of \code{sep}, and return a character vector containing the part
+Split the string at the first occurrence of \code{sep}, and return a list of character vectors containing the part
 before the separator, the separator itself, and the part after the separator.
 }
 \details{

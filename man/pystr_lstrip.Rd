@@ -7,12 +7,12 @@
 pystr_lstrip(str, chars = " ")
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{chars}{A string.}
+\item{chars}{A character string.}
 }
 \value{
-A string.
+A character vector.
 }
 \description{
 Return a copy of the string with leading characters removed.

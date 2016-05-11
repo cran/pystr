@@ -7,16 +7,16 @@
 pystr_find(str, sub, start = 1, end = nchar(str))
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{sub}{A string.}
+\item{sub}{A character vector.}
 
-\item{start}{An integer.}
+\item{start}{A numeric vector.}
 
-\item{end}{An integer.}
+\item{end}{A numeric vector.}
 }
 \value{
-An integer. Returns \code{-1} if \code{sub} is not found.
+A numeric vector. \code{-1} indicates \code{sub} was not found.
 }
 \description{
 Return the lowest index in the string where substring \code{sub} is found,

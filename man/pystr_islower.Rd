@@ -7,10 +7,10 @@
 pystr_islower(str)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 }
 \value{
-\code{TRUE} or \code{FALSE}
+A logical vector.
 }
 \description{
 Return \code{TRUE} if all cased characters in the string are lowercase and there is at least one

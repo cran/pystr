@@ -7,10 +7,10 @@
 pystr_isalnum(str)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 }
 \value{
-\code{TRUE} or \code{FALSE}.
+A logical vector.
 }
 \description{
 Return \code{TRUE} if all characters in the string are alphanumeric and there is at
@@ -20,6 +20,7 @@ least one character, \code{FALSE} otherwise.
 pystr_isalnum("abc")
 pystr_isalnum("abc123")
 pystr_isalnum("abc123!")
+pystr_isalnum(c("one", "2", "three!"))
 }
 \references{
 \url{https://docs.python.org/3/library/stdtypes.html#str.isalnum}

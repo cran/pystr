@@ -4,12 +4,12 @@
 #'
 #' If the optional argument \code{count} is given, only the first \code{count} occurrences are replaced.
 #'
-#' @param str A string.
-#' @param old A string.
-#' @param new A string.
-#' @param count An integer.
+#' @param str A character vector.
+#' @param old A character vector.
+#' @param new A character vector.
+#' @param count A numeric vector.
 #'
-#' @return A string.
+#' @return A character vector.
 #'
 #' @references \url{https://docs.python.org/3/library/stdtypes.html#str.replace}
 #'
@@ -19,6 +19,10 @@
 #'
 #' @export
 pystr_replace <- function(str, old, new, count=nchar(str) + 2) {
+  return(mapply(pystr_replace_, str, old, new, count, USE.NAMES=FALSE))
+}
+
+pystr_replace_ <- function(str, old, new, count) {
   if(count == 0) {
     return(str)
   }
@@ -40,7 +44,7 @@ pystr_replace <- function(str, old, new, count=nchar(str) + 2) {
   remaining = str
 
   while(cum_replaces < num_replaces) {
-    parts = pystr_split(remaining, old, 1)
+    parts = pystr_split(remaining, old, 1)[[1]]
     replaced = paste0(replaced, parts[1], new)
     remaining = parts[2]
     cum_replaces = cum_replaces + 1

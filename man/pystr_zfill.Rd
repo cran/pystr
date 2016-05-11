@@ -7,12 +7,12 @@
 pystr_zfill(str, width)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
 \item{width}{An integer.}
 }
 \value{
-A string.
+A character vector.
 }
 \description{
 Return a copy of the string left filled with ASCII \code{'0'} digits to make

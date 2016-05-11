@@ -4,21 +4,26 @@
 \alias{pystr_rindex}
 \title{Find the highest index of a substring.}
 \usage{
-pystr_rindex(str, sub)
+pystr_rindex(str, sub, start = 1, end = nchar(str))
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{sub}{A string.}
+\item{sub}{A character vector.}
+
+\item{start}{A numeric vector.}
+
+\item{end}{A numeric vector.}
 }
 \value{
-An integer.
+A numeric vector.
 }
 \description{
 Like \code{\link{pystr_rfind}} but raises an error if \code{sub} is not found.
 }
 \examples{
 pystr_rindex("abcxyzabc", "abc")
+pystr_rindex("12121212", "12", 4, 6)
 \dontrun{
 pystr_rindex("abcxyzabc", "123")
 }

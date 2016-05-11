@@ -4,21 +4,26 @@
 \alias{pystr_index}
 \title{Find the lowest index of a substring.}
 \usage{
-pystr_index(str, sub)
+pystr_index(str, sub, start = 1, end = nchar(str))
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{sub}{A string.}
+\item{sub}{A character vector.}
+
+\item{start}{A numeric vector.}
+
+\item{end}{A numeric vector.}
 }
 \value{
-An integer.
+A numeric vector.
 }
 \description{
 Like \code{\link{pystr_find}} but raises an error if \code{sub} is not found.
 }
 \examples{
 pystr_index("abcxyzabc", "abc")
+pystr_index("abcxyzabc", "abc", 4)
 \dontrun{
 pystr_index("abcxyzabc", "123")
 }

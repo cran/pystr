@@ -7,12 +7,12 @@
 pystr_strip(str, chars = " ")
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{chars}{A string.}
+\item{chars}{A character string.}
 }
 \value{
-A string.
+A character vector.
 }
 \description{
 Return a copy of the string with the leading and trailing characters removed.

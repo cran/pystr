@@ -7,17 +7,17 @@
 pystr_rsplit(str, sep = " ", maxsplit = nchar(str) - 1)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{sep}{A string.}
+\item{sep}{A character string.}
 
-\item{maxsplit}{An integer.}
+\item{maxsplit}{A numeric vector.}
 }
 \value{
-A character vector.
+A list of character vectors.
 }
 \description{
-Return a character vector of the words in the string, using \code{sep} as the delimiter
+Return a list of character vectors of the words in the string, using \code{sep} as the delimiter
 string.
 }
 \details{

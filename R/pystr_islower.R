@@ -3,9 +3,9 @@
 #' Return \code{TRUE} if all cased characters in the string are lowercase and there is at least one
 #' cased character, \code{FALSE} otherwise.
 #'
-#' @param str A string.
+#' @param str A character vector.
 #'
-#' @return \code{TRUE} or \code{FALSE}
+#' @return A logical vector.
 #'
 #' @references \url{https://docs.python.org/3/library/stdtypes.html#str.islower}
 #'
@@ -18,18 +18,5 @@
 #'
 #' @export
 pystr_islower <- function(str) {
-  cased = 0
-
-  for(i in 1:nchar(str)) {
-    letter = substr(str, i, i)
-
-    if(pystr_isalpha(letter)) {
-      cased = cased + 1
-      if(!(letter == tolower(letter))) {
-        return(FALSE)
-      }
-    }
-  }
-
-  return(cased > 0)
+  return(pystr_islower_(str))
 }

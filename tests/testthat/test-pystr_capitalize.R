@@ -18,3 +18,15 @@ test_that("it decapitalizes letters beyond the first letter", {
   capitalized = pystr_capitalize(original)
   expect_equal(capitalized, "Hello world")
 })
+
+test_that("it works with vectors of strings", {
+  original = c("HELLO", "WORLD")
+  capitalized = pystr_capitalize(original)
+  expect_equal(capitalized, c("Hello", "World"))
+})
+
+test_that("it handles NAs appropriately", {
+  original = c("HELLO", NA)
+  capitalized = pystr_capitalize(original)
+  expect_equal(capitalized, c("Hello", NA))
+})

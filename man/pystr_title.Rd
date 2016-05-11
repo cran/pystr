@@ -7,10 +7,10 @@
 pystr_title(str)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 }
 \value{
-A string.
+A character vector.
 }
 \description{
 Return a titlecased version of the string where words start with an uppercase character

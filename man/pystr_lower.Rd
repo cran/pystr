@@ -7,10 +7,10 @@
 pystr_lower(str)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 }
 \value{
-A string.
+A character vector.
 }
 \description{
 Return a copy of the string with all the cased characters converted to lowercase.

@@ -7,14 +7,14 @@
 pystr_ljust(str, width, fillchar = " ")
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
 \item{width}{An integer.}
 
-\item{fillchar}{A character.}
+\item{fillchar}{A character string.}
 }
 \value{
-A string.
+A character vector.
 }
 \description{
 Return \code{str} left justified in a string of length \code{width}.

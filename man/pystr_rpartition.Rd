@@ -7,15 +7,15 @@
 pystr_rpartition(str, sep)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{sep}{A string.}
+\item{sep}{A character string.}
 }
 \value{
 A character vector.
 }
 \description{
-Split the string at the last occurrence of \code{sep}, and return a character vector containing the part before the separator,
+Split the string at the last occurrence of \code{sep}, and return a list of character vectors containing the part before the separator,
 the separator itself, and the part after the separator.
 }
 \details{

@@ -7,31 +7,28 @@
 pystr_endswith(str, suffix, start = 1, end = nchar(str))
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{suffix}{A string, character vector, or list of strings.}
+\item{suffix}{A character vector.}
 
-\item{start}{An integer.}
+\item{start}{A numeric vector.}
 
-\item{end}{An integer.}
+\item{end}{A numeric vector.}
 }
 \value{
-\code{TRUE} or \code{FALSE}
+A logical vector.
 }
 \description{
 Return \code{TRUE} if the string \code{str} ends with the specified
 \code{suffix}, otherwise return \code{FALSE}.
 }
 \details{
-\code{suffix} can also be a list of suffixes to look for.
 With optional \code{start}, test beginning at that position.
 With optional \code{end}, stop comparing at that position.
 }
 \examples{
 pystr_endswith("selfie.jpg", ".jpg")
 pystr_endswith("selfie.jpg", ".png")
-pystr_endswith("selfie.jpg", c(".jpg", ".png"))
-pystr_endswith("selfie.jpg", list(".jpg", ".png"))
 pystr_endswith("hello world", "ello", 1, 5)
 }
 \references{

@@ -7,12 +7,12 @@
 pystr_translate(str, map)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
 \item{map}{A list of character mappings.}
 }
 \value{
-A string.
+A character vector.
 }
 \description{
 Return a copy of \code{str} where all characters have been mapped through

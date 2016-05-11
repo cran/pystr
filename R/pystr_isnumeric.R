@@ -3,9 +3,9 @@
 #' Return \code{TRUE} if all characters in the string are numeric characters, and there is at least one
 #' character, \code{FALSE} otherwise.
 #'
-#' @param str A string.
+#' @param str A character vector.
 #'
-#' @return \code{TRUE} or \code{FALSE}
+#' @return A logical vector.
 #'
 #' @references \url{https://docs.python.org/3/library/stdtypes.html#str.isnumeric}
 #'
@@ -18,14 +18,5 @@
 #'
 #' @export
 pystr_isnumeric <- function(str) {
-  for(i in 1:nchar(str)) {
-    letter = substr(str, i, i)
-    not_a_number = suppressWarnings(is.na(as.numeric(letter)))
-
-    if(not_a_number) {
-      return(FALSE)
-    }
-  }
-
-  return(TRUE)
+  return(pystr_isnumeric_(str))
 }

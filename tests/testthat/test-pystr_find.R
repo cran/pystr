@@ -16,3 +16,12 @@ test_that("it returns -1 when the substring isn't there", {
 test_that("it finds the index when start and end both truncated", {
   expect_equal(pystr_find("abcxyzabc", "xyz", 4, 7), 4)
 })
+
+test_that("it works with a character vector", {
+  expect_equal(pystr_find(c("abcabc", "xyabc"), "abc"), c(1, 3))
+})
+
+
+test_that("it works with multiple character vectors", {
+  expect_equal(pystr_find(c("abcabc", "xyabc"), c("abc", "xy")), c(1, 1))
+})

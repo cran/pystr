@@ -7,12 +7,12 @@
 pystr_splitlines(str, keepends = FALSE)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{keepends}{\code{TRUE} or \code{FALSE}}
+\item{keepends}{A logical vector.}
 }
 \value{
-A character vector.
+A list of character vectors.
 }
 \description{
 Return a list of the lines in the string, breaking at line boundaries.

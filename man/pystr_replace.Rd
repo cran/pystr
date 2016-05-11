@@ -7,16 +7,16 @@
 pystr_replace(str, old, new, count = nchar(str) + 2)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 
-\item{old}{A string.}
+\item{old}{A character vector.}
 
-\item{new}{A string.}
+\item{new}{A character vector.}
 
-\item{count}{An integer.}
+\item{count}{A numeric vector.}
 }
 \value{
-A string.
+A character vector.
 }
 \description{
 Return a copy of the string with all occurrences of substring \code{old} replaced by \code{new}.

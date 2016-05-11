@@ -7,10 +7,10 @@
 pystr_istitle(str)
 }
 \arguments{
-\item{str}{A string.}
+\item{str}{A character vector.}
 }
 \value{
-\code{TRUE} or \code{FALSE}
+A logical vector.
 }
 \description{
 Return \code{TRUE} if the string is a titlecased string and there is at least one

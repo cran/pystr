@@ -1,0 +1,6 @@
+Version 1.1.0 [WIP]
+-------------------------------------------------------------------------
+
+FEATURES
+* Work to increase the number of functions vectorised compile-side
+* Compiled code now handles NAs correctly
